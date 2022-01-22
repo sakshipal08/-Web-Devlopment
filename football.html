@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function incIndia(){
+              var Score=parseInt(document.getElementById("btnScoreIndia").innerHTML);
+              Score++;
+              document.getElementById("btnScoreIndia").innerHTML=Score;
+
+            }
+            function decIndia(){
+                var  Score=parseInt(document.getElementById("btnScoreIndia").innerHTML);
+              Score--;
+              document.getElementById("btnScoreIndia").innerHTML=Score;
+            }
+            function incEngland(){
+                var  Score=parseInt(document.getElementById("btnScoreEngland").innerHTML);
+              Score++;
+              document.getElementById("btnScoreEngland").innerHTML=Score;
+            }
+             function DecEngland(){
+                var  Score=parseInt(document.getElementById("btnScoreEngland").innerHTML);
+              Score--;
+              document.getElementById("btnScoreEngland").innerHTML=Score;
+             }
+        </script>
+        <style>
+            body{
+                background-image: url('football groung.jpg');
+                background-size: 100% 100%;
+                height: 100vh;
+            }
+            .app-title{
+                background-color:none;
+                color: rgb(22, 20, 19);
+                
+                font-size: 80px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                text-align: center;
+                text-decoration: rgb(201, 186, 158);
+                text-shadow: 10px 10px 30px rgb(26, 41, 247);
+            
+            }
+                
+                
+    
+            .container{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                margin: 20px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+
+            }
+            .container-child{
+                border: 1px black solid;
+                width: 400px;
+                height: 500px;
+                margin: 10px;
+                padding: 10px;
+                border-radius: 25px;
+                background-color: white;
+                transition: 0.3s;
+                 
+                background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
+            }
+             .container-child:hover{
+                 width: 410px;
+                 height: 510px;
+                box-shadow: 0px 0px 20px rgb(224, 221, 20);
+             } 
+             .team-title{
+                 text-align: center;
+                 font-size: 50px;
+                 font-weight: bold;
+                 color: rgb(199, 191, 179);
+                 margin-top: 15px;
+                 text-shadow: 0px 0px 10px black;
+                 
+             }
+            .flag1{
+                width: 100px;
+                height: 100px;
+                
+                margin-left: 150px;
+                margin-top: 5px;
+            
+            }
+            .flag2{
+                width: 100px;
+                height: 100px;
+                margin-left: 150px;
+                margin-top: 8;
+            }
+            .btnScore{
+                width: 60px;
+                height: 60px;
+                font: radius 70px;
+                border-radius:50%;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                font-size: 80px;
+                 border: transparent;
+                background-color: transparent;
+                
+
+                
+            }
+            .btnScore:hover{
+                cursor: pointer;
+            }
+            .txtScore{
+                text-align: center;
+                font-size: 40px;
+            }
+
+            @media (min-width:1025px)and (max-width:1280px){}
+                
+            }
+        </style>
+    </head>
+
+
+
+
+
+    <body>
+        <h1 class="app-title"> ⚽<u> FOOTBALL   LEAGUE </u>⚽ </h1>
+        <div class="container">
+            <div class="container-child">
+                <h2 class="team-title">India</h2>
+             <img  class="flag1" src="icons8-india-48.png" />  
+
+                <button id="btnIncIndia" class="btnScore"onClick="incIndia()">+</button>
+                <h3 id="btnScoreIndia" class="txtScore">0</h3>
+                <button id="btnDecIndia" class="btnScore"onClick="DecIndia()">-</button>
+                
+            </div>
+            <div class="container-child">
+                <h2 class="team-title">England</h2>
+                <img  class="flag2" src="icons8-england-48 (1).png" />
+              <button id="btnIncEngland" class="btnScore"onClick="incEngland()">+</button>
+              <h3 id="btnScoreEngland" class="txtScore">0</h3>
+              <button id="btnDecEngland" class="btnScore"onClick="DecEngland()">-</button>
+
+            </div>
+        </div>
+
+
+
+
+
+
+    </body>
+</html>
